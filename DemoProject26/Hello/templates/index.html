@@ -1,0 +1,24 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container mb-3 py-4">
+  <h1 class="text-center">Stock Details</h1>
+  <form method="post" action="">
+  {% csrf_token %}
+      <div class="form-group">
+          <label for="stockName">Stock Name</label>
+          <input type="text" class="form-control" id="stockName" name="stockName" placeholder="Stock Name">
+      </div>
+
+      <div class="form-group">
+          <label for="qty">Qty</label>
+          <input type="text" class="form-control" id="qty" name="qty" placeholder="Quantity">
+      </div>
+      
+           <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+
+</div>
+{% endblock body %}
